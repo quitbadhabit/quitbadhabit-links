@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quit Bad Habits - Transform Your Life, One Habit at a Time</title>
+    <meta
+      name="description"
+      content="Break free from bad habits with our powerful iOS app. Track progress, get motivated, and build a better you with smart reminders and detailed analytics."
+    />
+    <meta
+      name="keywords"
+      content="quit habits, break bad habits, habit tracker, iOS app, personal development, lifestyle change"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Quit Bad Habits - Transform Your Life" />
+    <meta
+      property="og:description"
+      content="Say goodbye to bad habits! Track your progress, get motivated, and build lasting change."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://quitbadhabits.app" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Quit Bad Habits - Transform Your Life"
+    />
+    <meta
+      name="twitter:description"
+      content="Say goodbye to bad habits! Track your progress, get motivated, and build lasting change."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#007AFF",
+              secondary: "#5856D6",
+              accent: "#FF9500",
+              success: "#34C759",
+              warning: "#FF9500",
+              danger: "#FF3B30",
+            },
+            fontFamily: {
+              sans: [
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "SF Pro Display",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+      .float-animation {
+        animation: float 6s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body class="smooth-scroll">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-sm">QBH</span>
+            </div>
+            <span class="font-semibold text-gray-900">Quit Bad Habits</span>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#features"
+              class="text-gray-600 hover:text-primary py-2 transition-colors"
+              >Features</a
+            >
+            <a
+              href="#pricing"
+              class="text-gray-600 hover:text-primary py-2 transition-colors"
+              >Premium</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-600 hover:text-primary py-2 transition-colors"
+              >Contact</a
+            >
+            <a
+              href="#download"
+              class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+              >Download</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-gray-600 p-2">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100"
+      >
+        <div class="px-4 py-2 space-y-2">
+          <a
+            href="#features"
+            class="block py-2 text-gray-600 hover:text-primary"
+            >Features</a
+          >
+          <a href="#pricing" class="block py-2 text-gray-600 hover:text-primary"
+            >Premium</a
+          >
+          <a href="#contact" class="block py-2 text-gray-600 hover:text-primary"
+            >Contact</a
+          >
+          <a
+            href="#download"
+            class="block py-2 bg-primary text-white px-4 rounded-lg text-center"
+            >Download</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="pt-20 pb-16 gradient-bg text-white min-h-screen flex items-center"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div>
+              <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Say goodbye to
+                <span class="text-accent">bad habits!</span>
+              </h1>
+              <p class="text-xl lg:text-2xl text-white/90 leading-relaxed">
+                Transform your life with the most intuitive habit tracking app.
+                Build lasting change with smart reminders, detailed analytics,
+                and powerful motivation tools.
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <a
+                href="#download"
+                class="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+                  />
+                </svg>
+                <span>Download for iOS</span>
+              </a>
+              <a
+                href="#features"
+                class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-primary transition-colors flex items-center justify-center"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <div class="relative float-animation">
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20"
+            >
+              <div class="bg-white rounded-2xl p-6 shadow-2xl">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-lg font-semibold text-gray-900">
+                    Today's Progress
+                  </h3>
+                  <div class="text-green-500 font-bold">🎉</div>
+                </div>
+                <div class="space-y-4">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-600">Smoking</span>
+                    <div class="flex items-center space-x-2">
+                      <div
+                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden"
+                      >
+                        <div
+                          class="w-full h-full bg-green-500 rounded-full"
+                        ></div>
+                      </div>
+                      <span class="text-green-600 font-semibold">7 days</span>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-600">Social Media</span>
+                    <div class="flex items-center space-x-2">
+                      <div
+                        class="w-24 h-2 bg-gray-200 rounded-full overflow-hidden"
+                      >
+                        <div
+                          class="w-3/4 h-full bg-blue-500 rounded-full"
+                        ></div>
+                      </div>
+                      <span class="text-blue-600 font-semibold">3 days</span>
+                    </div>
+                  </div>
+                  <div class="pt-4 border-t border-gray-100">
+                    <div class="flex justify-between text-sm">
+                      <span class="text-gray-500">Money Saved</span>
+                      <span class="font-semibold text-green-600">$245</span>
+                    </div>
+                    <div class="flex justify-between text-sm mt-1">
+                      <span class="text-gray-500">Time Gained</span>
+                      <span class="font-semibold text-blue-600">18 hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Everything you need to
+            <span class="text-primary">break free</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our comprehensive suite of tools helps you understand, track, and
+            overcome your bad habits with proven techniques and smart
+            technology.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Daily Tracking
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Track your habits every day with our intuitive interface. Mark
+              your successes and learn from setbacks with detailed progress
+              visualization.
+            </p>
+          </div>
+
+          <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+            <div
+              class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-secondary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 17h5l-5 5-5-5h5v-8h10v8z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Smart Reminders
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Get personalized notifications at your most vulnerable times. Our
+              AI learns your patterns and sends motivational messages when you
+              need them most.
+            </p>
+          </div>
+
+          <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+            <div
+              class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-accent"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Money & Time Saved
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              See exactly how much money and time you're saving by breaking your
+              bad habits. Visual progress keeps you motivated and focused on
+              your goals.
+            </p>
+          </div>
+
+          <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+            <div
+              class="w-16 h-16 bg-success/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-success"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Milestone Celebrations
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Celebrate your achievements with our milestone system. From your
+              first day to one year clean, every victory is recognized and
+              celebrated.
+            </p>
+          </div>
+
+          <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+            <div
+              class="w-16 h-16 bg-warning/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-warning"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Progress Analysis
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Understand your patterns with detailed analytics. See your success
+              rates, identify triggers, and optimize your strategy for lasting
+              change.
+            </p>
+          </div>
+
+          <div class="feature-card bg-white rounded-2xl p-8 shadow-lg">
+            <div
+              class="w-16 h-16 bg-danger/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-danger"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Custom Habit Creation
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Create custom habits tailored to your specific needs. Set
+              personalized goals, costs, and time investments for maximum
+              effectiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Premium Features Section -->
+    <section id="pricing" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Unlock Your Full
+            <span class="text-primary">Potential</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Get access to advanced features that supercharge your habit-breaking
+            journey with premium insights and tools.
+          </p>
+        </div>
+
+        <div class="items-center w-1/2 flex justify-center mx-auto">
+          <div class="space-y-8">
+            <div
+              class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white"
+            >
+              <h3 class="text-2xl font-bold mb-6">Premium Features</h3>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                  <div
+                    class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">✨ Unlimited Habit Tracking</h4>
+                    <p class="text-white/80 text-sm">
+                      Track as many habits as you want without restrictions
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div
+                    class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">📊 Advanced Analytics</h4>
+                    <p class="text-white/80 text-sm">
+                      Get detailed progress reports and insights
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div
+                    class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">📄 Professional PDF Reports</h4>
+                    <p class="text-white/80 text-sm">
+                      Share your progress with others professionally
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                  <div
+                    class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">🔔 Smart Notification System</h4>
+                    <p class="text-white/80 text-sm">
+                      Advanced reminders and motivational messages
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          Start Your Journey
+          <span class="text-primary">Today</span>
+        </h2>
+        <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+          Join the people who have successfully transformed their lives. Your
+          future self will thank you.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12"
+        >
+          <a
+            href="https://apps.apple.com/app/quit-bad-habits/id"
+            class="bg-black text-white px-8 py-4 rounded-2xl flex items-center space-x-3 hover:bg-gray-800 transition-colors"
+          >
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+              />
+            </svg>
+            <div class="text-left">
+              <div class="text-xs">Download on the</div>
+              <div class="text-lg font-semibold">App Store</div>
+            </div>
+          </a>
+
+          <div class="flex items-center space-x-4 text-gray-500">
+            <span>•</span>
+            <span>Free download</span>
+
+            <span>•</span>
+            <span>No ads</span>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            What happens after download?
+          </h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-2xl font-bold text-primary">1</span>
+              </div>
+              <h4 class="font-semibold text-gray-900 mb-2">Quick Setup</h4>
+              <p class="text-gray-600 text-sm">
+                Choose your habits and set your goals in under 2 minutes
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-2xl font-bold text-secondary">2</span>
+              </div>
+              <h4 class="font-semibold text-gray-900 mb-2">Start Tracking</h4>
+              <p class="text-gray-600 text-sm">
+                Begin your journey with smart reminders and daily check-ins
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div
+                class="w-16 h-16 bg-success/10 rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-2xl font-bold text-success">3</span>
+              </div>
+              <h4 class="font-semibold text-gray-900 mb-2">See Results</h4>
+              <p class="text-gray-600 text-sm">
+                Watch your progress and celebrate milestones along the way
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+            Get in <span class="text-primary">Touch</span>
+          </h2>
+          <p class="text-xl text-gray-300">
+            Have questions or need support? We're here to help.
+          </p>
+        </div>
+
+        <div class="flex items-center justify-center">
+          <div class="space-y-8 mx-auto w-1/2">
+            <div>
+              <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold">Email Support</p>
+                    <a
+                      href="mailto:quitbadhabit16@gmail.com"
+                      class="text-primary hover:text-blue-400 transition-colors"
+                    >
+                      quitbadhabit16@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-secondary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold">Response Time</p>
+                    <p class="text-gray-300">Usually within 24 hours</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4">
+                Frequently Asked Questions
+              </h3>
+              <div class="space-y-3">
+                <div>
+                  <h4 class="font-medium text-primary">
+                    Is the app really free?
+                  </h4>
+                  <p class="text-gray-300 text-sm">
+                    Yes! The core features are completely free. Premium features
+                    are available with a 7-day free trial.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-medium text-primary">
+                    Can I track multiple habits?
+                  </h4>
+                  <p class="text-gray-300 text-sm">
+                    Free users can track up to 3 habits. Premium users get
+                    unlimited habit tracking.
+                  </p>
+                </div>
+                <div>
+                  <h4 class="font-medium text-primary">Is my data private?</h4>
+                  <p class="text-gray-300 text-sm">
+                    Absolutely. Your data is stored securely and is never shared
+                    with third parties.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2024 Quit Bad Habits. All rights reserved. Made with ❤️ for a
+            healthier world.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+
+            // Close mobile menu if open
+            if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+          }
+        });
+      });
+
+      // Contact form submission
+      const contactForm = document.querySelector("form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form data
+          const formData = new FormData(this);
+          const name = this.querySelector('input[type="text"]').value;
+          const email = this.querySelector('input[type="email"]').value;
+          const message = this.querySelector("textarea").value;
+
+          // Create mailto link
+          const subject = encodeURIComponent("Quit Bad Habits - Contact Form");
+          const body = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+          );
+          const mailtoLink = `mailto:quitbadhabit16@gmail.com?subject=${subject}&body=${body}`;
+
+          // Open mail client
+          window.location.href = mailtoLink;
+
+          // Show success message
+          alert(
+            "Thank you for your message! Your email client should open shortly."
+          );
+
+          // Reset form
+          this.reset();
+        });
+      }
+
+      // Add scroll effect to navigation
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          nav.classList.add("shadow-lg");
+        } else {
+          nav.classList.remove("shadow-lg");
+        }
+      });
+    </script>
+  </body>
+</html>
